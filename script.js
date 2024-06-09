@@ -4,7 +4,6 @@ const qrCode = document.querySelector('.QRCODE');
 const bgQR = document.querySelector('.bgC');
 const sizes = document.getElementById('size');
 const qrText = document.getElementById('qr-text');
-
 let size = sizes.value;
 let bgsize = 1450;
 
@@ -42,7 +41,6 @@ function isEmptyInput(){
     sizes.value.length > 0 ? generateQRCode() : alert("Enter the size of your QR code");;
     parseFloat(sizes.value) > 0 ? generateQRCode() : alert("Enter the positive size for the QR code!");;
 }
-
 
 function generateQRCode() {
     qrCode.innerHTML = "Your QR Code:";
@@ -124,7 +122,6 @@ function createCustomAlert(txt) {
 
 
 	msg = alertObj.appendChild(d.createElement("p"));
-	//msg.appendChild(d.createTextNode(txt));
 	msg.innerHTML = txt;
 
 	btn = alertObj.appendChild(d.createElement("a"));
